@@ -3,11 +3,11 @@ package kadai_10_3;
 import kadai.Monster;
 
 public class SuperMonster extends Monster {
-	
+
 	private int p_at;  
 	private int poison;
-	
-                                            	//  “ÅUŒ‚
+
+	//  “ÅUŒ‚
 	public void poison_Attack() {             
 		System.out.println(this.getName() + "‚Í“Åj‚ÅUŒ‚‚µ‚½I");
 		System.out.println("‰ö•¨‚É" + this.p_at + "‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½");
