@@ -11,7 +11,6 @@ public class Story_10_3 {
 	// —EÒ‚Ì¶¬	
 		
 	SuperHero h2 = new SuperHero();
-
 	h2.setName ("roto");
 	h2.setHp      (100);
 	h2.setAt       (50);
@@ -58,7 +57,24 @@ public class Story_10_3 {
 	System.out.println("UŒ‚—Í:"     + mg2.getAt());
 	System.out.println("MP:"         + mg2.getMp());
 	System.out.println("UŒ‚–‚–@—Í:" + mg2.getM_at());
-
+	
+	
+	h2.attack();
+	h2.defense(); 
+	h2.heal();
+	
+	m2.attack1();
+	m2.poison_Attack();
+	m2.defense();
+	
+	
+	mg2.attack();
+	mg2.magic_Attack();
+	mg2.magic_Recovery();
+	mg2.heal();
+	
+	
+	
 	}
 	
 }

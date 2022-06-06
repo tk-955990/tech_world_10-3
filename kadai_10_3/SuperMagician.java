@@ -3,6 +3,7 @@ package kadai_10_3;
 import kadai.Magician;
 
 public class SuperMagician extends Magician {
+	                                             //  ’´–‚–@UŒ‚                 
 	
 	public void super_magic_Attack() { 
 		System.out.println(this.getName() + "‚Í’´UŒ‚–‚–@‚ÅUŒ‚‚µ‚½I");
