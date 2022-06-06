@@ -39,8 +39,8 @@ public class Story_10_3 {
 	System.out.println("‘Ì—Í:"     + m2.getHp());
 	System.out.println("UŒ‚—Í:"   + m2.getAt());
 	System.out.println("–hŒä—Í:"   + m2.getDf());
-	System.out.println("“ÅUŒ‚—Í:" + m2.getDf());
-	System.out.println("“Æj‚Ì”:" + m2.getDf());
+	System.out.println("“ÅUŒ‚—Í:" + m2.getP_at());
+	System.out.println("“Æj‚Ì”:" + m2.getPoison());
 	
 	
 	// –‚–@g‚¢‚Ì¶¬
@@ -59,8 +59,6 @@ public class Story_10_3 {
 	System.out.println("MP:"         + mg2.getMp());
 	System.out.println("UŒ‚–‚–@—Í:" + mg2.getM_at());
 
-	h2.attack();
-	mg2.super_magic_Attack() ;
 	}
 	
 }
