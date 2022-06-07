@@ -1,8 +1,5 @@
 package kadai_10_3;
 
-import kadai.Hero;
-import kadai.Magician;
-import kadai.Monster;
 import kadai.Story;
 
 public class Story_10_3 {
@@ -64,7 +61,9 @@ public class Story_10_3 {
 		h2.heal();
 
 		m2.attack1();
-		m2.poison_Attack();
+		m2.attack2();
+		m2.poison_Attack1();
+		m2.poison_Attack2();
 		m2.defense();
 
 
