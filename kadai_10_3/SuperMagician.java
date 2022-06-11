@@ -10,6 +10,7 @@ public class SuperMagician extends Magician {
       System.out.println("怪物に" + (this.getM_at())*2 + "のダメージを与えた");
       setMp(this.getMp() - 20);
       System.out.println("MPが２０ポイント消費し" + this.getMp() + "ポイントになった");
+   // m2.setHp(m2.getHp()-(mg2.getM_at())*2);
    }
 
 }

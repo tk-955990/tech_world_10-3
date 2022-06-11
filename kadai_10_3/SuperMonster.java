@@ -10,18 +10,18 @@ public class SuperMonster extends Monster {
 	//  “ÅUŒ‚  
 	                                      //  —EÒ‚Ö‚Ì“ÅUŒ‚
 	public void poison_Attack1() {             
-		System.out.println(this.getName() + "‚Í“Åj‚ÅUŒ‚‚µ‚½I");
+		System.out.println(this.getName() + "‚ÍX‚É“Åj‚ÅUŒ‚‚µ‚½I");
 		System.out.println("—EÒ‚É" + this.p_at + "‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½");
 		this.poison = this.poison - 1;
-		// h2.setHp=h2.setHp-m2.setP_at ;
-		System.out.println("“Æj‚ª‚P–{Á”ï‚µ" + this.poison + "–{‚É‚È‚Á‚½");
+		// h2.setHp(h2.setHp()-m2.setP_at()) ;
+		System.out.println("“Æj‚ğ‚P–{Á”ï‚µ" + this.poison + "–{‚É‚È‚Á‚½");
 	}                                     //  –‚–@g‚¢‚Ö‚Ì“ÅUŒ‚
 	public void poison_Attack2() {             
-		System.out.println(this.getName() + "‚Í“Åj‚ÅUŒ‚‚µ‚½I");
+		System.out.println(this.getName() + "‚ÍX‚É“Åj‚ÅUŒ‚‚µ‚½I");
 		System.out.println("–‚–@g‚¢‚É" + this.p_at + "‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½");
 		this.poison = this.poison - 1;
 		// mg2.setHp=mg2.setHp-m2.setP_at ;
-		System.out.println("“Æj‚ª‚P–{Á”ï‚µ" + this.poison + "–{‚É‚È‚Á‚½");
+		System.out.println("“Æj‚ğ‚P–{Á”ï‚µ" + this.poison + "–{‚É‚È‚Á‚½");
 	}
 
 	public void setP_at(int p_at) {
