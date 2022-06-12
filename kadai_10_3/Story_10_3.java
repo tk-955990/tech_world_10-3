@@ -11,7 +11,7 @@ public class Story_10_3 {
 
 		SuperHero h2 = new SuperHero();
 		h2.setName ("roto");
-		h2.setHp      (100);
+		h2.setHp      (200);
 		h2.setAt       (50);
 		h2.setDf       (80);
 
@@ -25,8 +25,8 @@ public class Story_10_3 {
 		// ‰ö•¨‚Ì¶¬
 
 		SuperMonster m2 = new SuperMonster();
-		m2.setName ("kaiju");
-		m2.setHp       (1500);
+		m2.setName  ("kaiju");
+		m2.setHp       (350);
 		m2.setAt       (100);
 		m2.setDf       (120);
 		m2.setP_at      (50);
@@ -45,7 +45,7 @@ public class Story_10_3 {
 
 		SuperMagician mg2 = new SuperMagician();
 		mg2.setName ("medeia");
-		mg2.setHp        (500);
+		mg2.setHp        (350);
 		mg2.setAt         (30);
 		mg2.setMp         (50);
 		mg2.setM_at       (50);
@@ -96,7 +96,7 @@ public class Story_10_3 {
 				System.out.println("MP:" + mg2.getMp());
 
 				System.out.println("y"+m2.getName()+":ƒXƒe[ƒ^ƒXz");
-				System.out.println("‘Ì—Í:" + m2.getHp());
+				System.out.println("‘Ì—Í:" + m2.getHp());    
 				System.out.println("“Æj‚Ì”:"+m2.getPoison());
 			}
 			if(m2.getHp()<=0) {
@@ -112,11 +112,30 @@ public class Story_10_3 {
 			if(mg2.getHp()<=0)
 				System.out.println("–‚–@g‚¢‚Í€‚ñ‚Å‚é");
 			else {
-
-				//  –‚–@g‚¢‚Ìƒ^[ƒ“
+				
+				
+				
+			//  –‚–@g‚¢‚Ìƒ^[ƒ“
 				System.out.println("<<   –‚–@g‚¢‚Ììí‚ÍH   >>");
-				System.out.println("UŒ‚:1 UŒ‚–‚–@:2 ’´UŒ‚–‚–@:3 ‰ñ•œ–‚–@:4 ‹xŒe:5 I—¹:6");
-
+				
+				if(mg2.getMp()>=20) {
+				System.out.println("UŒ‚:1 UŒ‚–‚–@:2 ’´UŒ‚–‚–@:3");
+				System.out.println("‰ñ•œ–‚–@:4 ‹xŒe:5 I—¹:6");
+				}
+				if((mg2.getMp()<20)&&(mg2.getMp()>=10)) {
+					System.out.println("UŒ‚:1 UŒ‚–‚–@:2 ");
+					System.out.println("‰ñ•œ–‚–@:4 ‹xŒe:5 I—¹:6");	
+				}
+				if((mg2.getMp()<10)&&(mg2.getMp()>=5)) {
+					System.out.println("UŒ‚:1 ‰ñ•œ–‚–@:4 ‹xŒe:5 I—¹:6");	
+				}
+				if(mg2.getMp()<5) {
+					System.out.println("UŒ‚:1 ‹xŒe:5 I—¹:6");	
+				}
+				
+				
+				
+				
 				int get_mgCommand = new java.util.Scanner(System.in).nextInt();
 
 				switch (get_mgCommand) {
@@ -125,28 +144,14 @@ public class Story_10_3 {
 					m2.setHp(m2.getHp()-mg2.getAt());
 					break;
 				case 2:
-					if(mg2.getMp()<10) {
-						System.out.println("MP‚ª‘«‚è‚Ü‚¹‚ñ");
-						break;
-					}
 					mg2.magic_Attack();
 					m2.setHp(m2.getHp()-mg2.getM_at());
 					break;	
-
-
 				case 3:
-					if(mg2.getMp()<20) {
-						System.out.println("MP‚ª‘«‚è‚Ü‚¹‚ñ");
-						break;
-					}
 					mg2.super_magic_Attack();
 					m2.setHp(m2.getHp()-(mg2.getM_at())*2);
 					break;
 				case 4:
-					if(mg2.getMp()<5) {
-						System.out.println("MP‚ª‘«‚è‚Ü‚¹‚ñ");
-						break;
-					}
 					mg2.magic_Recovery();
 					break;
 				case 5:
