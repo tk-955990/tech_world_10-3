@@ -11,7 +11,7 @@ public class Story_10_3 {
 
 		SuperHero h2 = new SuperHero();
 		h2.setName ("roto");
-		h2.setHp      (200);
+		h2.setHp      (1000);
 		h2.setAt       (50);
 		h2.setDf       (80);
 
@@ -26,7 +26,7 @@ public class Story_10_3 {
 
 		SuperMonster m2 = new SuperMonster();
 		m2.setName  ("kaiju");
-		m2.setHp       (350);
+		m2.setHp       (1000);
 		m2.setAt       (100);
 		m2.setDf       (120);
 		m2.setP_at      (50);
@@ -45,7 +45,7 @@ public class Story_10_3 {
 
 		SuperMagician mg2 = new SuperMagician();
 		mg2.setName ("medeia");
-		mg2.setHp        (350);
+		mg2.setHp        (1000);
 		mg2.setAt         (30);
 		mg2.setMp         (50);
 		mg2.setM_at       (50);
@@ -78,7 +78,7 @@ public class Story_10_3 {
 				switch (get_hCommand) {
 				case 1:
 					h2.attack();
-					m2.setHp(m2.getHp()-h2.getAt());
+					m2.setHp(m2.getHp()-(h2.getAt())*2);
 					break;
 				case 2:
 					h2.defense();
@@ -187,34 +187,28 @@ public class Story_10_3 {
 				int random=(int)(Math.random()*6);
 				switch (random) {
 				case 0:
-					m2.attack1();
-					h2.setHp(h2.getHp()-m2.getAt());
+					m2.attack1(h2);
 					if(h2.getHp()<=0)
 						System.out.println("@@@@@@@@@@@  "+h2.getName()+"  ‚ÍŽ€‚ñ‚¾  @@@@@@@@@@");
 					break;
 				case 1:
-					m2.attack2();
-					mg2.setHp(mg2.getHp()-m2.getAt());
+					m2.attack2(mg2);
 					if(mg2.getHp()<=0)
 						System.out.println("@@@@@@@@@@@  "+mg2.getName()+"  ‚ÍŽ€‚ñ‚¾  @@@@@@@@@@");
 					break;
 				case 2:
-					m2.attack1();
-					h2.setHp(h2.getHp()-m2.getAt());
+					m2.attack1(h2);
 					if(m2.getPoison()>0) {
-						m2.poison_Attack1();
-						h2.setHp(h2.getHp()-m2.getP_at()) ;
+						m2.poison_Attack1(h2);
 					}
 					if(h2.getHp()<=0)
 						System.out.println("@@@@@@@@@@@  "+h2.getName()+"  ‚ÍŽ€‚ñ‚¾  @@@@@@@@@@");
 
 					break;
 				case 3:
-					m2.attack2();
-					m2.setHp(mg2.getHp()-m2.getAt());
+					m2.attack2(mg2);
 					if(m2.getPoison()>0) {
-						m2.poison_Attack2(); 
-						mg2.setHp(mg2.getHp()-m2.getP_at()) ;
+						m2.poison_Attack2(mg2); 
 					}
 					if(h2.getHp()<=0)
 						System.out.println("@@@@@@@@@@@  "+h2.getName()+"  ‚ÍŽ€‚ñ‚¾  @@@@@@@@@@");
@@ -256,17 +250,14 @@ public class Story_10_3 {
 				int random=(int)(Math.random()*4);
 				switch (random) {
 				case 0:
-					m2.attack1();
-					h2.setHp(h2.getHp()-m2.getAt());
+					m2.attack1(h2);
 					if(h2.getHp()<=0)
 						System.out.println("@@@@@@@@@@@  "+h2.getName()+"  ‚ÍŽ€‚ñ‚¾  @@@@@@@@@@");
 					break;
 				case 1:
-					m2.attack1();
-					h2.setHp(h2.getHp()-m2.getAt());
+					m2.attack1(h2);
 					if(m2.getPoison()>0) {
-						m2.poison_Attack1();
-						h2.setHp(h2.getHp()-m2.getP_at()) ;
+						m2.poison_Attack1(h2);
 					}
 					if(h2.getHp()<=0)
 						System.out.println("@@@@@@@@@@@  "+h2.getName()+"  ‚ÍŽ€‚ñ‚¾  @@@@@@@@@@");
@@ -306,17 +297,14 @@ public class Story_10_3 {
 				int random=(int)(Math.random()*4);
 				switch (random) {
 				case 0:
-					m2.attack2();
-					mg2.setHp(mg2.getHp()-m2.getAt());
+					m2.attack2(mg2);
 					if(mg2.getHp()<=0)
 						System.out.println("@@@@@@@@@@@  "+mg2.getName()+"  ‚ÍŽ€‚ñ‚¾  @@@@@@@@@@");
 					break;
 				case 1:
-					m2.attack2();
-					mg2.setHp(mg2.getHp()-m2.getAt());
+					m2.attack2(mg2);
 					if(m2.getPoison()>0) {
-						m2.poison_Attack2(); 
-						mg2.setHp(mg2.getHp()-m2.getP_at()) ;
+						m2.poison_Attack2(mg2); 
 					}
 					if(mg2.getHp()<=0)
 						System.out.println("@@@@@@@@@@@  "+mg2.getName()+"  ‚ÍŽ€‚ñ‚¾  @@@@@@@@@@");

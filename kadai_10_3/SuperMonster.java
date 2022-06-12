@@ -9,18 +9,18 @@ public class SuperMonster extends Monster {
 
 	//  毒攻撃  
 	                                      //  勇者への毒攻撃
-	public void poison_Attack1() {             
+	public void poison_Attack1(SuperHero h2) {             
 		System.out.println(this.getName() + "は更に毒針で攻撃した！");
 		System.out.println("勇者に" + this.p_at + "のダメージを与えた");
 		this.poison = this.poison - 1;
-		// h2.setHp(h2.setHp()-m2.setP_at()) ;
+		h2.setHp(h2.getHp()-this.getP_at()) ;
 		System.out.println("独針を１本消費し" + this.poison + "本になった");
 	}                                     //  魔法使いへの毒攻撃
-	public void poison_Attack2() {             
+	public void poison_Attack2(SuperMagician mg2) {             
 		System.out.println(this.getName() + "は更に毒針で攻撃した！");
 		System.out.println("魔法使いに" + this.p_at + "のダメージを与えた");
 		this.poison = this.poison - 1;
-		// mg2.setHp=mg2.setHp-m2.setP_at ;
+		mg2.setHp(mg2.getHp()-this.getP_at()) ;
 		System.out.println("独針を１本消費し" + this.poison + "本になった");
 	}
 
@@ -42,5 +42,13 @@ public class SuperMonster extends Monster {
 	public int getP_at() {
 		// TODO 自動生成されたメソッド・スタブ
 		return this.p_at;
+	}
+	public void p_at2() {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+	public void p_at1() {
+		// TODO 自動生成されたメソッド・スタブ
+		
 	}
 }
