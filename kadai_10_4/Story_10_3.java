@@ -11,7 +11,7 @@ public class Story_10_3 {
 
 		SuperHero h2 = new SuperHero();
 		h2.setName ("roto");
-		h2.setHp      (1000);
+		h2.setHp      (500);
 		h2.setAt       (50);
 		h2.setDf       (80);
 
@@ -45,7 +45,7 @@ public class Story_10_3 {
 
 		SuperMagician mg2 = new SuperMagician();
 		mg2.setName ("medeia");
-		mg2.setHp        (1000);
+		mg2.setHp        (500);
 		mg2.setAt         (30);
 		mg2.setMp         (50);
 		mg2.setM_at       (50);
@@ -95,16 +95,7 @@ public class Story_10_3 {
 					break;
 				case 4:
 				}
-				System.out.println("【"+ h2.getName()+":ステータス】");
-				System.out.println("体力:" + h2.getHp());
-
-				System.out.println("【"+ mg2.getName()+":ステータス】");
-				System.out.println("体力:" + mg2.getHp());
-				System.out.println("MP:" + mg2.getMp());
-
-				System.out.println("【"+m2.getName()+":ステータス】");
-				System.out.println("体力:" + m2.getHp());    
-				System.out.println("独針の数:"+m2.getPoison());
+				status(h2, mg2, m2);
 			}
 			if(m2.getHp()<=0) {
 				System.out.println("@@@@@@@@@@@  "+m2.getName()+"  を倒した  @@@@@@@@@@");
@@ -168,16 +159,7 @@ public class Story_10_3 {
 					break ;
 
 				}
-				System.out.println("【"+ h2.getName()+":ステータス】");
-				System.out.println("体力:" + h2.getHp());
-
-				System.out.println("【"+ mg2.getName()+":ステータス】");
-				System.out.println("体力:" + mg2.getHp());
-				System.out.println("MP:" + mg2.getMp());
-
-				System.out.println("【"+m2.getName()+":ステータス】");
-				System.out.println("体力:" + m2.getHp());
-				System.out.println("独針の数:"+m2.getPoison());
+				status(h2, mg2, m2);
 			}
 			if(m2.getHp()<=0) {
 				System.out.println("@@@@@@@@@@@  "+m2.getName()+"  を倒した  @@@@@@@@@@");
@@ -231,17 +213,7 @@ public class Story_10_3 {
 					System.out.println(m2.getName()+"の攻撃力が"+m2.getAt()+"になった");
 					break;
 				}
-				System.out.println("【"+ h2.getName()+":ステータス】");
-				System.out.println("体力:" + h2.getHp());
-
-				System.out.println("【"+ mg2.getName()+":ステータス】");
-				System.out.println("体力:" + mg2.getHp());
-				System.out.println("MP:" + mg2.getMp());
-
-				System.out.println("【"+m2.getName()+":ステータス】");
-				System.out.println("体力:" + m2.getHp());    
-				System.out.println("独針の数:"+m2.getPoison());
-
+				status(h2, mg2, m2);
 				if((mg2.getHp()<=0)&&(h2.getHp()<=0)) { 
 					System.out.println("============= game over ================");
 					break;                            
@@ -279,17 +251,7 @@ public class Story_10_3 {
 					System.out.println(m2.getName()+"の攻撃力が"+m2.getAt()+"になった");
 					break;
 				}
-				System.out.println("【"+ h2.getName()+":ステータス】");
-				System.out.println("体力:" + h2.getHp());
-
-				System.out.println("【"+ mg2.getName()+":ステータス】");
-				System.out.println("体力:" + mg2.getHp());
-				System.out.println("MP:" + mg2.getMp());
-
-				System.out.println("【"+m2.getName()+":ステータス】");
-				System.out.println("体力:" + m2.getHp());    
-				System.out.println("独針の数:"+m2.getPoison());
-
+				status(h2, mg2, m2);
 				if((mg2.getHp()<=0)&&(h2.getHp()<=0)) { 
 					System.out.println("============= game over ================");
 					break;                            
@@ -326,17 +288,7 @@ public class Story_10_3 {
 					System.out.println(m2.getName()+"の攻撃力が"+m2.getAt()+"になった");
 					break;
 				}
-				System.out.println("【"+ h2.getName()+":ステータス】");
-				System.out.println("体力:" + h2.getHp());
-
-				System.out.println("【"+ mg2.getName()+":ステータス】");
-				System.out.println("体力:" + mg2.getHp());
-				System.out.println("MP:" + mg2.getMp());
-
-				System.out.println("【"+m2.getName()+":ステータス】");
-				System.out.println("体力:" + m2.getHp());    
-				System.out.println("独針の数:"+m2.getPoison());
-
+				status(h2, mg2, m2);
 				if((mg2.getHp()<=0)&&(h2.getHp()<=0)) { 
 					System.out.println("============= game over ================");
 					break;                            
@@ -346,5 +298,26 @@ public class Story_10_3 {
 				continue;
 			}
 		}
+	}
+	public static void status(SuperHero h2,SuperMagician mg2,SuperMonster m2) {
+		System.out.println("【"+ h2.getName()+":ステータス】");
+		System.out.println("体力:" + h2.getHp());
+
+		System.out.println("【"+ mg2.getName()+":ステータス】");
+		System.out.println("体力:" + mg2.getHp());
+		System.out.println("MP:" + mg2.getMp());
+
+		System.out.println("【"+m2.getName()+":ステータス】");
+		System.out.println("体力:" + m2.getHp());    
+		System.out.println("独針の数:"+m2.getPoison());
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }
