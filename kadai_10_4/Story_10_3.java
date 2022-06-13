@@ -310,14 +310,5 @@ public class Story_10_3 {
 		System.out.println("【"+m2.getName()+":ステータス】");
 		System.out.println("体力:" + m2.getHp());    
 		System.out.println("独針の数:"+m2.getPoison());
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }
